@@ -1,0 +1,34 @@
+  ▸ Console/             | 16         ]);                                     |  1 <?php
+  ▸ Exceptions/          | 17     }                                           |  2 
+  ▾ Http/                | 18     public function listUser(User $user)        |  3 namespace App\Http\Controllers;
+    ▾ Controllers/       | 19     {                                           |  4 
+      ▾ Form/            | 20         ($user);                                |  5 use App\User;
+          TestController.| 21         return view('listUsers',[               |  6 use Illuminate\Http\Request;
+        Controller.php   | 22             'user'=>$user                       |  7 use Illuminate\Support\Facades\Hash;
+        UserController.ph| 23         ]);                                     |  8 
+    ▸ Middleware/        | 24     }                                           |  9 class UserController extends Controller
+      Kernel.php         | 25     public function formAddUser()               | 10 {
+  ▸ Providers/           | 26     {                                           | 11     public function listUser()
+    User.php             | 27         ($user);                                | 12     {
+▸ bootstrap/             | 28         return view('addUser');                 | 13 /*        $user = new User();
+▸ config/                | 29     }                                           | 14         $user -> name = 'Rosinha';
+▸ database/              | 30     public function storeUser(Request $request) | 15         $user -> email = 'rosa@gmail.com';
+▸ public/                | 31     {                                           | 16         $user -> password = '123';
+▾ resources/             | 32         var_dump($request);                     | 17         $user -> save();
+  ▸ js/                  | 33     }                                           | 18 
+  ▸ lang/                | 34 }                                               | 19         echo "<h1>Listagem de usuários</h1>";
+  ▸ sass/                | </Controllers/Form/TestController.php   55% ☰ 19:5   <ml/ml5/app/Http/Controllers/UserController.php   php  7% ☰ 2:1 
+  ▾ views/               | 28 //Route::verb('report-users','UserController@listUser')->name('route_name');                                      
+      addUser.blade.php  | 29 //Route::get('report-users','UserController@listUser')->('name.listUser');                                        
+      listAllUsers.blade.| 30                                                                                                                   
+      listUser.blade.php | 31 //VERB POST 
+      listUsers.blade.php| 32 Route::get('usuarios/store','Form\\TestController@storeUser')->name('users.store');
+      welcome.blade.php  | 33 
+▾ routes/                | 34 //VERB GET
+    api.php              | 35 Route::get('usuarios','Form\\TestController@listAllUsers')->name('users.listAll');
+    channels.php         | 36 Route::get('usuarios/novo','Form\\TestController@formAddUser')->name('users.formAddUser');
+    console.php          | 37 Route::get('usuarios/{user}','Form\\TestController@listUser')->name('users.list');
+    web.php              | 38 
+▸ storage/               | 39 //VERB PUT/PATCH
+ NERD                      NORMAL  web.php                                                            php  utf-8[unix]  78% ☰ 32:11  ☲ [31]tra… 
+"web.php" 41L, 1161C gravado(s)
